@@ -35,6 +35,7 @@ const CountryMap = props => {
   const [activePopup, showPopup] = useState(0);
   const [tripTimingCounts, handleTripTiming] = useState([0, 0, 0]);
   const [activeTimings, handleTimingCheckbox] = useState([1, 1, 1]);
+  const [previousTrip, handlePreviousTrip] = useState(null);
 
   useEffect(() => {
     let pastCount = 0;
@@ -122,6 +123,7 @@ const CountryMap = props => {
     countryInfo(geography);
     showPopup(1);
     handleNewCountry(geography);
+    checkForPreviousTrips(geography);
   }
 
   function countryInfo(geography) {
@@ -156,19 +158,21 @@ const CountryMap = props => {
   }
 
   function checkForPreviousTrips(geography) {
-    let previousTrips = false;
+    let previousTrip = null;
     for (let i in clickedCountryArray) {
       if (clickedCountryArray[i].countryId === geography.id) {
-        previousTrips = true;
+        previousTrip = {
+          id: clickedCountryArray[i].id,
+          tripTiming: clickedCountryArray[i].tripTiming
+        }
       }
     }
-    return previousTrips;
+    handlePreviousTrip(previousTrip);
   }
 
   function handleActiveTimings(timings) {
     handleTimingCheckbox(timings);
   }
-
   return (
     <>
       <div className="map-header-container" style={{ position: "relative" }}>
@@ -233,8 +237,9 @@ const CountryMap = props => {
             component={ClickedCountryContainer}
             componentProps={{
               countryInfo: clickedCountry,
+              clickedCountryArray: clickedCountryArray,
               handleTripTiming: handleTripTimingHelper,
-              previousTrips: checkForPreviousTrips(clickedCountry),
+              previousTrip: previousTrip,
               refetch: props.refetch
             }}
           />

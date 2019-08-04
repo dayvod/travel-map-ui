@@ -20,6 +20,7 @@ const MapPage = () => {
           })
         ) {
           countryArray.push({
+            id: userData.Places_visited[i].id,
             countryId: userData.Places_visited[i].country,
             tripTiming: 0
           });
@@ -34,6 +35,7 @@ const MapPage = () => {
           })
         ) {
           countryArray.push({
+            id: userData.Places_visiting[i].id,
             countryId: userData.Places_visiting[i].countryId,
             tripTiming: 1
           });
@@ -47,6 +49,7 @@ const MapPage = () => {
         })
       ) {
         countryArray.push({
+          id: userData.Place_living.id,
           countryId: userData.Place_living.country,
           tripTiming: 2
         });

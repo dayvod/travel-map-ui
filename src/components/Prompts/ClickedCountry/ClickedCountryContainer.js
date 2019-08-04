@@ -141,7 +141,7 @@ function ClickedCountryContainer(props) {
             <ClickedCountryTiming
               handleTripTiming={handleTripTiming}
               handlePageChange={handlePageChange}
-              previousTrips={props.customProps.previousTrips}
+              previousTrip={props.customProps.previousTrip}
               country={props.customProps.countryInfo.id}
             />
           ),
