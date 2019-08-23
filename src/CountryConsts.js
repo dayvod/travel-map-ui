@@ -500,7 +500,7 @@ export const countryConsts = [
         coordinates: [49.48, 103.13]
     },
     {
-        country: "China",
+        country: "People's Republic of China",
         zoom: 2.7,
         coordinates: [39.42, 103.83]
     },

@@ -151,6 +151,7 @@ class ClickedCountryCities extends Component {
   }
 
   handleOnResult(event) {
+    console.log(event);
     let cities = this.state.cities;
     let cityArrayElement = {
       city: event.result.text,

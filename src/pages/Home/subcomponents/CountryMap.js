@@ -87,8 +87,8 @@ const CountryMap = props => {
         outline: "none"
       },
       hover: {
-        fill: "rgb(180, 180, 180)",
-        stroke: "rgb(180, 180, 180)",
+        fill: "rgba(110, 115, 119, 0.60)",
+        stroke: "rgb(100, 100, 100)",
         strokeWidth: 0.75,
         outline: "none"
       },
@@ -104,62 +104,81 @@ const CountryMap = props => {
       switch (countryTimingArraySorted.join()) {
         case "0":
           if (activeTimings[0]) {
+            countryStyles.hover.fill = "rgba(203, 118, 120, 0.75)";
             countryStyles.default.fill = "#CB7678";
           }
           break;
         case "1":
           if (activeTimings[1]) {
+            countryStyles.hover.fill = "rgba(115, 167, 195, 0.75)";
             countryStyles.default.fill = "#73A7C3";
           }
           break;
         case "2":
           if (activeTimings[2]) {
+            countryStyles.hover.fill = "rgba(150, 177, 154, 0.75)";
             countryStyles.default.fill = "#96B1A8";
           }
           break;
         case "0,1":
           if (activeTimings[0] && activeTimings[1]) {
+            countryStyles.hover.fill = "rgba(167, 128, 205, 0.75)";
             countryStyles.default.fill = "#a780cd";
           } else if (activeTimings[0]) {
+            countryStyles.hover.fill = "rgba(203, 118, 120, 0.75)";
             countryStyles.default.fill = "#CB7678";
           } else if (activeTimings[1]) {
+            countryStyles.hover.fill = "rgba(115, 167, 195, 0.75)";
             countryStyles.default.fill = "#73A7C3";
           }
           break;
         case "0,2":
           if (activeTimings[0] && activeTimings[2]) {
+            countryStyles.hover.fill = "rgba(219, 192, 113, 0.75)";
             countryStyles.default.fill = "#DBC071";
           } else if (activeTimings[0]) {
+            countryStyles.hover.fill = "rgba(203, 118, 120, 0.75)";
             countryStyles.default.fill = "#CB7678";
           } else if (activeTimings[2]) {
+            countryStyles.hover.fill = "rgba(150, 177, 154, 0.75)";
             countryStyles.default.fill = "#96B1A8";
           }
           break;
         case "1,2":
           if (activeTimings[1] && activeTimings[2]) {
+            countryStyles.hover.fill = "rgba(219, 241, 244, 0.75)";
             countryStyles.default.fill = "#dbf1f4";
           } else if (activeTimings[1]) {
+            countryStyles.hover.fill = "rgba(115, 167, 195, 0.75)";
             countryStyles.default.fill = "#73A7C3";
           } else if (activeTimings[2]) {
+            countryStyles.hover.fill = "rgba(150, 177, 154, 0.75)";
             countryStyles.default.fill = "#96B1A8";
           }
           break;
         case "0,1,2":
           if (activeTimings[0] && activeTimings[1]) {
             if (activeTimings[2]) {
+              countryStyles.hover.fill = "rgba(248, 248, 252, 0.75)";
               countryStyles.default.fill = "rgb(248, 248, 252)";
             } else {
+              countryStyles.hover.fill = "rgba(167, 128, 205, 0.75)";
               countryStyles.default.fill = "#a780cd";
             }
           } else if (activeTimings[0] && activeTimings[2]) {
+            countryStyles.hover.fill = "rgba(219, 192, 113, 0.75)";
             countryStyles.default.fill = "#DBC071";
           } else if (activeTimings[1] && activeTimings[2]) {
+            countryStyles.hover.fill = "rgba(219, 241, 244, 0.75)";
             countryStyles.default.fill = "#dbf1f4";
           } else if (activeTimings[0]) {
+            countryStyles.hover.fill = "rgba(203, 118, 120, 0.75)";
             countryStyles.default.fill = "#DBC071";
           } else if (activeTimings[1]) {
+            countryStyles.hover.fill = "rgba(115, 167, 195, 0.75)";
             countryStyles.default.fill = "#73A7C3";
           } else if (activeTimings[2]) {
+            countryStyles.hover.fill = "rgba(150, 177, 154, 0.75)";
             countryStyles.default.fill = "#96B1A8";
           }
           break;
