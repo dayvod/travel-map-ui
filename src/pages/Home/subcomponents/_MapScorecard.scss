@@ -36,7 +36,7 @@
   transform: translate(-40px, 140px);
   @media (min-width: "800px") {
     order: 1;
-    transform: translate(-40px, -140px);
+    transform: translate(40px, -280px);
   }
 
   .drag-icon {
